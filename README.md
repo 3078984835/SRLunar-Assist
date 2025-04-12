@@ -41,6 +41,7 @@ LunarSRL-Brace/
 ├── run.py               # Main simulation launcher  
 └── config.yaml          # SRL parameters (e.g., joint limits)  
 ❓ FAQ
+
 Q: How to modify SRL leg length?
 Edit config.yaml → leg_geometry.max_extension
 
