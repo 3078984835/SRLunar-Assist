@@ -47,6 +47,9 @@ Edit config.yaml → leg_geometry.max_extension
 Q: Dependency conflicts with NumPy?
 Try conda install numpy=1.21 before pip install!
 
+Q: What is the version of CoppeliaSim?
+CoppeliaSim EDU, version 4.9.0, 64bit.
+
 📧 Contribution
 Submit issues with 🌕 emoji or PRs tagged with [SRL]!
 
