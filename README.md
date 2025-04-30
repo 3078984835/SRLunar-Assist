@@ -33,6 +33,7 @@ python run.py --config config.yaml
 
 📂 Project Structure
 
+```
 LunarSRL-Brace/
 ├── __pycache__/             # Python cache files
 ├── resource/                # Resource folder containing main code
@@ -47,6 +48,7 @@ LunarSRL-Brace/
 ├── test008.ttt              # Test dataset 008
 ├── test009.ttt              # Test dataset 009
 └── visualization.py         # Visualization processing code
+```
 
 ❓ FAQ
 
