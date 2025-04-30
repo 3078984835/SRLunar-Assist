@@ -1,7 +1,10 @@
+"""
+常量定义模块 - 包含所有仿真相关的常量配置
+"""
+import math
 import numpy as np
 
-# 全局常量定义
-
+# 步行模式常量
 # 22个关键帧的时间比例（0到1均匀分布）
 TIMINGS = [i / 21 for i in range(22)]
 
@@ -49,3 +52,52 @@ JOINT3_LENGTH = 0.3934
 JOINT4_LENGTH = 0.44167
 HEIGHT = 1.03
 LONGST = 1.57
+
+# Bill速度
+BILL_VELOCITY = 1.0
+
+# 坐姿到站姿的角度数据
+SIT_TO_STAND_WAYPOINTS = {
+    'shoulder': [0.0, 0.0],  # 肩膀在站姿时角度
+    'elbow': [0.0, 0.0],     # 肘部在站姿时角度
+    'leg': [-1.57, 0.0],     # 大腿在站姿时角度
+    'knee': [1.57, 0.0],     # 膝盖角度
+    'ankle': [0.0, 0.0],     # 踝关节角度
+    'neck': [0.0, 0.0],      # 颈部位置
+    'J2': [math.radians(60), math.radians(30)],  
+    'J3': [math.radians(-90), 0.0],
+    'P4': [-0.3, 0.0]
+}
+
+# 趴姿到站姿的角度数据
+PRONE_TO_STAND_WAYPOINTS = [
+    [0.0, 0.0],
+    [1.57, 0.0],
+    [0.0, 0.0],
+    [math.radians(120), math.radians(330)],
+    [math.radians(150), math.radians(0)],
+    [-0.3, 0.0]
+]
+# 摔倒过程的角度数据
+FALL_TO_STAND_WAYPOINTS = [
+    [0.0, 0.0],
+    [0.0, math.radians(-30), 0.0],
+    [0.0, 0.0],
+    [0.0, math.radians(60), math.radians(30)],
+    [0.0, math.radians(-60), 0.0],
+    [-0.3, 0.0]
+]
+
+# 模拟模式定义
+MODE_WALK = "walk"
+MODE_SIT = "sit"
+MODE_PRONE = "prone"
+MODE_FALL = "fall"
+
+# 场景路径（可根据实际部署环境修改）
+SCENE_PATHS = {
+    MODE_WALK: r"D:\STUDY\BS\CoopeliaSimApi\test0425\test006.ttt",
+    MODE_SIT: r"D:\STUDY\BS\CoopeliaSimApi\test0425\test007.ttt",
+    MODE_PRONE: r"D:\STUDY\BS\CoopeliaSimApi\test0425\test008.ttt",
+    MODE_FALL: r"D:\STUDY\BS\CoopeliaSimApi\test0425\test009.ttt"
+}
