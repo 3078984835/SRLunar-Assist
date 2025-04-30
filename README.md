@@ -33,13 +33,21 @@ python run.py --config config.yaml
 
 📂 Project Structure
 
-LunarSRL-Brace/  
-├── src/                  # Core code (kinematics & control)  
-├── data/                # Simulation datasets  
-├── docs/                # Technical reports & figures  
-├── requirements.txt     # Python dependencies  
-├── run.py               # Main simulation launcher  
-└── config.yaml          # SRL parameters (e.g., joint limits)  
+LunarSRL-Brace/
+├── __pycache__/             # Python cache files
+├── resource/                # Resource folder containing main code
+├── constants.py         # SRL parameter definitions (e.g., joint limits)
+├── main.py              # Main simulation launcher
+├── motion.py            # Motion control-related code
+├── README.md                # Project documentation
+├── requirements.txt         # Python dependencies
+├── simulation_api.py        # Simulation API interaction code
+├── test006.ttt              # Test dataset 006
+├── test007.ttt              # Test dataset 007
+├── test008.ttt              # Test dataset 008
+├── test009.ttt              # Test dataset 009
+└── visualization.py         # Visualization processing code
+
 ❓ FAQ
 
 Q: How to modify SRL leg length?
